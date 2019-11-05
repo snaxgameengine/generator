@@ -1,6 +1,6 @@
-include_directories ("${CMAKE_SOURCE_DIR}/include")
+include_directories ("../include")
 
-set(GENERATOR_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/include/generator")
+set(GENERATOR_INCLUDE_DIR "../include/generator")
 
 set(GENERATOR_HEADERS
 	${GENERATOR_INCLUDE_DIR}/AnyGenerator.hpp
@@ -142,3 +142,4 @@ set(GENERATOR_SOURCES
 
 add_library(generator${SUFFIX} STATIC ${GENERATOR_SOURCES} ${GENERATOR_HEADERS})
 
+target_include_directories(generator${SUFFIX} PUBLIC ${GLM_INCLUDE_DIR})
