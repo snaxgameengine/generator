@@ -142,4 +142,4 @@ set(GENERATOR_SOURCES
 
 add_library(generator${SUFFIX} STATIC ${GENERATOR_SOURCES} ${GENERATOR_HEADERS})
 
-target_include_directories(generator${SUFFIX} PUBLIC ${GLM_INCLUDE_DIR})
+target_link_libraries(generator${SUFFIX} PUBLIC glm)
