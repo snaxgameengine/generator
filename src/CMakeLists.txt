@@ -1,3 +1,4 @@
+
 include_directories ("../include")
 
 set(GENERATOR_INCLUDE_DIR "../include/generator")
@@ -140,6 +141,7 @@ set(GENERATOR_SOURCES
 	TubeMesh.cpp
 )
 
+
 add_library(generator${SUFFIX} STATIC ${GENERATOR_SOURCES} ${GENERATOR_HEADERS})
 
-target_link_libraries(generator${SUFFIX} PUBLIC glm)
+target_link_libraries(generator${SUFFIX} PUBLIC glm::glm)

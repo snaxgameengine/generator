@@ -1,4 +1,5 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.15 FATAL_ERROR)
+cmake_policy(VERSION 3.15)
 
 #if(MSVC)
 #	add_definitions(/W3)
